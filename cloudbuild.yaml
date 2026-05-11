@@ -1,6 +1,6 @@
 steps:
   # maven test
-  - name: 'maven:3.8-openjdk-8'
+  - name: 'maven:3.8-eclipse-temurin-8'
     id: 'Run Tests'
     entrypoint: 'mvn'
     args: ['test']
