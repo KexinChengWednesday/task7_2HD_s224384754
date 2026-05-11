@@ -13,8 +13,8 @@ public class TodoApp {
     private static final TodoService service = new TodoService();
 
     public static void main(String[] args) throws IOException {
-        int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8888"));
-        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+    	int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
+    	HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", port), 0);
 
         server.createContext("/", TodoApp::handleRoot);
         server.createContext("/api/todos", TodoApp::handleTodos);
