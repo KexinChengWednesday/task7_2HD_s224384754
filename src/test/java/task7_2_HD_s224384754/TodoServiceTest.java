@@ -60,10 +60,10 @@ class TodoServiceTest {
         assertThrows(IllegalArgumentException.class, () -> service.create(null));
     }
 
-    // fail test
+    // fail test->correct
     @Test
     void testIntentionallyFailing() {
         Todo todo = service.create("This will fail");
-        assertEquals(999L, todo.getId()); // real id is 1
+        assertEquals(1L, todo.getId()); // real id is 1
     }
 }
