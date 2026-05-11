@@ -43,7 +43,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>TodoApp</mainClass>
+                            <mainClass>task7_2_HD_s224384754.TodoApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
