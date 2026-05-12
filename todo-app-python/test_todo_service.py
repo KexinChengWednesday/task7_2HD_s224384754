@@ -51,8 +51,8 @@ def test_none_title_raises(service):
     with pytest.raises(ValueError):
         service.create(None)
 
-
-# Intentionally failing test for CI/CD demonstration
-def test_intentionally_failing(service):
-    todo = service.create("This will fail")
-    assert todo["id"] == 999  # Real id is 1, so this fails
+# Fixed: verify the first created todo has id 1
+def test_first_todo_has_id_one(service):
+    todo = service.create("First task")
+    assert todo["id"] == 1
+    
