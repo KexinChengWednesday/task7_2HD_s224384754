@@ -64,6 +64,6 @@ class TodoServiceTest {
     @Test
     void testIntentionallyFailing() {
         Todo todo = service.create("This will fail");
-        assertEquals(999L, todo.getId()); // real id is 1
+        assertEquals(99L, todo.getId()); // real id is 1
     }
 }
